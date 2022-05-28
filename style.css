@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  /* text  */
+  --sdk-desat-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* background gradient  */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Neutral */
+  --sdk-grayish-blue: hsl(237, 12%, 33%);
+  --dk-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  --heading-weight: 700;
+  --text-weight: 400;
+}
+img {
+  width: 100%;
+}
+body {
+  background: radial-gradient(var(--soft-blue), var(--soft-violet));
+}
+
+h1 {
+  font-weight: var(--heading-weight);
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+}
+.img-container {
+  position: relative;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img-illustration {
+  height: 100%;
+  width: 100%;
+}
+.box-illustration {
+  position: absolute;
+  top: 12rem;
+  left: 30px;
+  width: 10rem;
+  z-index: 2;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  padding: 1.5rem 5rem 1.5rem 0;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow-x: hidden;
+}
+
+.container-flex > * {
+  width: 100%;
+}
+
+.dropdown-item {
+  color: var(--sdk-grayish-blue);
+  border-bottom: 1px solid var(--light-grayish-blue);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dk-grayish-blue);
+}
+
+.dropdown-header.active {
+  color: var(--sdk-desat-blue);
+}
+
+.dropdown-icon {
+  display: grid;
+  place-items: center;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+  transition: 0.2s linear;
+}
+
+.dropdown-paragraph {
+  display: none;
+  font-size: 1rem;
+  color: var(--sdk-desat-blue);
+}
+
+.dropdown-paragraph.show {
+  display: block;
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .dropdown-section {
+    margin: 0.5rem;
+  }
+  .container-flex {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+  }
+  .dropdown-header {
+    font-size: 0.8rem;
+  }
+  .dropdown-paragraph {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 800px) {
+  .container-flex {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+}
