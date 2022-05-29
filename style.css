@@ -35,15 +35,17 @@ h1 {
   background-image: url("./images/bg-pattern-desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .img-illustration {
   height: 100%;
   width: 100%;
+  transform: translateX(-20%);
 }
 .box-illustration {
   position: absolute;
   top: 12rem;
-  left: 30px;
+  left: -10%;
   width: 10rem;
   z-index: 2;
 }
@@ -104,23 +106,35 @@ h1 {
   h1 {
     font-size: 1.5rem;
     padding-bottom: 0.5rem;
-  }
-  .dropdown-section {
-    margin: 0.5rem;
+    text-align: center;
   }
   .container-flex {
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
+    padding: 1rem;
+    overflow: visible;
   }
+  .img-container {
+    background-image: url("./images/bg-pattern-mobile.svg");
+    background-position: top center;
+    background-size: auto;
+  }
+  .dropdown-section {
+    margin: 0.5rem 0rem;
+  }
+
   .dropdown-header {
     font-size: 0.8rem;
   }
   .dropdown-paragraph {
     font-size: 0.7rem;
   }
-}
-@media (max-width: 800px) {
-  .container-flex {
-    padding: 1.5rem 1.5rem 1.5rem 0;
+  .box-illustration {
+    top: -1rem;
+    left: 5%;
+    width: 3rem;
+  }
+  .img-illustration {
+    transform: translateY(-60%);
   }
 }
+
